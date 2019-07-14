@@ -1,20 +1,16 @@
-var swiper = new Swiper('.product-slider', {
+const swiper = new Swiper('.product-slider', {
     spaceBetween: 30,
     effect: 'fade',
-    // initialSlide: 2,
-    loop: false,
+    loop: true,
     navigation: {
         nextEl: '.next',
         prevEl: '.prev'
     },
-    // mousewheel: {
-    //     // invert: false
-    // },
     on: {
         init: function(){
-            var index = this.activeIndex;
+            const index = this.activeIndex;
 
-            var target = $('.product-slider-item').eq(index).data('target');
+            const target = $('.product-slider-item').eq(index).data('target');
 
             console.log(target);
 
@@ -26,9 +22,9 @@ var swiper = new Swiper('.product-slider', {
 });
 
 swiper.on('slideChange', function () {
-    var index = this.activeIndex;
+    const index = this.activeIndex;
 
-    var target = $('.product-slider-item').eq(index).data('target');
+    const target = $('.product-slider-item').eq(index).data('target');
 
     console.log(target);
 
